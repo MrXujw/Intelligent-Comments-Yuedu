@@ -1,0 +1,4 @@
+@charset "utf-8";
+
+.clearfix:after{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+body{color:#000;background:#fff;font-family: Arial,sans-serif,SimSun;font-size:24px;}

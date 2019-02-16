@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Postil</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+	<script src="./js/fileinput.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/selfpage.css">
+	<link rel="stylesheet" href="./css/examples.css">
+	<script src="./js/typed.js"></script>
+	<script src="./js/main.js"></script>
+	
+</head>
+
+<body>
+		
+	<!-- 导航条 -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+					<span class="sr-only">切换导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./login.html">Postil</a>
+			</div>
+			<div class="collapse navbar-collapse" id="example-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="./pageshow.html" target="_blank">文章中心</a>
+					</li>
+					<li class="active">
+						<a href="#">个人中心</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- 导航条结束 -->
+	<!-- 首页布局 -->
+	<div class="container">
+		<div class="row selfBack">
+			<div class="col-xs-12 text-center headlogo">
+				<img src="./images/headlogo.jpg">
+				<i class="fa fa-vimeo" aria-hidden="true"></i>
+			</div>
+			<div class="col-xs-12 text-center">
+				<p class="selfInfo">囿侑</p>
+			</div>
+			<!-- 个人中心图片流 -->
+		</div>
+	</div>
+	<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h3>我的批注</h3>
+				</div>
+				<i class="fa fa-plus" id="addPic" onclick="contribute();"></i>
+				<div class="col-xs-4 row-xs-2 text-center">
+					<a href="./page01.html" target="_blank">
+						<img src="./images/pages/muou-150x150.jpg" class="pageLogo">
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<div class="pageTitle">
+						<a href="./page01.html" target="_blank">
+							木偶
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-5">
+					<div class="pageInfo text-right"><i class="fa fa-history"></i>发布于1天前</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="pageCont">这句话的必须很生动形象</div>
+					<div class="pageCont">厉害厉害！！</div>
+					<div class="pageCont">最喜欢的童话故事...</div>
+					<div class="pageCont">越来越喜欢这个作者了</div>
+					<div class="pageCont">能过合理的想象,反映出意味深长的哲理,行文流畅,简洁,充分发挥了自己的想像力,是一篇不错的文章,一些精妙词语的使用,无形中为文章增添了不少情趣. </div>	
+				</div>
+				<div class="col-xs-12 text-right pageMore">
+					<a href="" target="_blank">
+						<i class="fa fa-ellipsis-h"></i>
+					</a>
+				</div>
+				<div class="col-xs-12 text-center">————</div>
+				<div class="col-xs-4 row-xs-2 text-center">
+					<a href="./page02.html" target="_blank">
+						<img src="./images/pages/xizhuang-150x150.jpg" class="pageLogo">
+					</a>
+				</div>
+				<div class="col-xs-3">
+					<div class="pageTitle">
+						<a href="./page02.html" target="_blank">
+							鬼王
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-5">
+					<div class="pageInfo text-right"><i class="fa fa-history"></i>发布于2天前</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="pageCont">这里的渲染吓死人了！</div>
+					<div class="pageCont">环境渲染很丰富，能让读者身临其境。</div>
+					<div class="pageCont">厉害厉害！！</div>
+					<div class="pageCont">这里的描写很生动</div>
+				</div>
+				<div class="col-xs-12 text-right pageMore">
+					<a href="" target="_blank">
+						<i class="fa fa-ellipsis-h"></i>
+					</a>
+				</div>
+				<div class="col-xs-12 text-center">————</div>
+				
+	<!-- /view -->
+	<!-- 添加按钮 -->
+
+	<script src="js/classie.js"></script>
+	<script src="js/dynamics.min.js"></script>
+	<script src="layer/layer.js"></script>
+	<script>
+			function contribute(){
+		//iframe层
+	layer.open({
+	  type: 2,
+	  area: ['360px', '500px'],
+	  skin: 'layui-layer-rim', //加上边框
+	  content: ['contribute.html', 'yes']
+	});
+	}
+		</script>
+		
+		
+</body>
+
+</html>
